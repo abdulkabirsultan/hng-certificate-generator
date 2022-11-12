@@ -13,8 +13,8 @@ export const uploadCsv = async (req, res) => {
   const json = csvToJson.fieldDelimiter(',').getJsonFromCsv(csv.path);
 
   json.forEach((row) => {
-    const name = row.name
-    if (!name.toLowerCase()) {
+    const name = row.name.toLowerCase()
+    if (!name) {
       throw new BadRequestError('please input a name in your csv!!');
     }
   });
