@@ -9,6 +9,10 @@ This is a repo created by group 3 backend interns in team headlight for HNG stag
 ```http
 POST https://hng-certificate-generator-production.up.railway.app/api/v1/upload
 ```
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `csv` | `file type` | **Required**. Your key must be csv |
+
 # Note
 
 ### Your csv file must have the following fields
