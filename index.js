@@ -5,7 +5,6 @@ import 'express-async-errors';
 
 //import Routes
 import uploadRoute from './routes/uploadCsv.js';
-import convertRoute from './routes/converter.js';
 import errorHandlerMiddleware from './Middlewares/error-handler.js';
 
 const app = express();
@@ -24,7 +23,6 @@ app.use(express.urlencoded({ extended: true }));
 const baseUrl = '/api/v1';
 app.get('/', (req, res) => res.send('HNG CERTIFICATE GENERATOR'));
 app.use(`${baseUrl}/upload`, uploadRoute);
-app.use(`${baseUrl}/convert`, convertRoute);
 
 app.use(errorHandlerMiddleware);
 
